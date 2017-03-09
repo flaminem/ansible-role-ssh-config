@@ -7,12 +7,12 @@ Playbook example : ( file local_ssh_config.yml )
 ```
   ---
    - hosts: all
-     sudo: no
+     become: no
      gather_facts: yes
 
    - hosts: localhost
      connection: local
-     sudo: false
+     become: false
      roles:
       - ssh-config
 ```
